@@ -1,0 +1,41 @@
+﻿@model List<Pessoa>;
+@{
+    ViewData["Title"] = "TITULO DA PAGINA";
+}
+
+<h1>Index</h1>
+
+@if (Model.Any())
+{
+
+    <div class="table-responsive">
+        <table id="tabela" class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome </th>
+                    <th>Endereco</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr data-id="@item.Id">
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Endereco</td>
+                        <td>@item.Telefone</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+}
+else
+{
+    <div class="row">
+        <h3 class="alert alert-info" style="display:none">Nenhum resultado para ser exibido</h3>
+    </div>
+}

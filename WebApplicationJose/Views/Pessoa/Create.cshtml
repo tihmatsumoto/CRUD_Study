@@ -1,0 +1,29 @@
+﻿@model Pessoa;
+@{
+    ViewData["Title"] = "Create";
+}
+
+@{
+    if (!string.IsNullOrEmpty(TempData["erro"]?.ToString()))
+    {
+        <h1>@TempData["erro"]?.ToString()</h1>
+    }
+}
+<!-- Default form contact -->
+<form action="@Url.Action("CreatePessoa", "Pessoa")" method="post" id="formPessoa" class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Cadastro</p>
+    <!-- Name -->
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control mb-4", @placeholder = "Nome" })
+
+    <!-- Phone -->
+    @Html.TextBoxFor(x => x.Telefone, new { @class = "form-control mb-4", @placeholder = "Telefone" })
+
+    <!-- End -->
+    @Html.TextBoxFor(x => x.Endereco, new { @class = "form-control mb-4", @placeholder = "Endereco" })
+
+
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" type="submit" id="salvar">Cadastrar</button>
+
+</form>

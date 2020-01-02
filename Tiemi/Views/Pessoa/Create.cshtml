@@ -1,0 +1,30 @@
+﻿@model Pessoa;
+@{
+    ViewData["Title"] = "Criar novo cadastro";
+}
+
+<!-- Default form contact -->
+    <form action="@Url.Action("CreatePessoa", "Pessoa")" method="post" id="formPessoa" class="border border-light p-5">
+        @Html.HiddenFor(x => x.Id)
+        <p class="h4 mb-4 text-center">Cadastro</p>
+        <!-- Nome -->
+        <label for="InputNome">Nome</label>
+        @Html.TextBoxFor(x => x.Nome, new { @class = "form-control mb-4", @placeholder = "Nome" })
+
+        <!-- Idade -->
+        <label for="InputIdade">Idade</label>
+        @Html.TextBoxFor(x => x.Idade, new { @class = "form-control mb-4", @placeholder = "Idade" })
+
+        <!-- Email -->
+        <label for="InputEmail">Email address</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control mb-4", @placeholder = "E-mail" })
+
+        <!-- Telefone -->
+        <label for="InputTelefone">Telefone</label>
+        @Html.TextBoxFor(x => x.Telefone, new { @class = "form-control mb-4", @placeholder = "Telefone", @required="required" })
+
+        <!-- Send button -->
+        <button class="btn btn-info btn-block" type="submit" id="salvar">Cadastrar</button>
+
+    </form>
+

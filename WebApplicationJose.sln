@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationJose", "WebApplicationJose\WebApplicationJose.csproj", "{67BA18A0-3185-44B9-8DC1-D1C6822CE937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiemi", "Tiemi\Tiemi.csproj", "{943C101C-195F-46E2-94B5-C9C479C578FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67BA18A0-3185-44B9-8DC1-D1C6822CE937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BA18A0-3185-44B9-8DC1-D1C6822CE937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BA18A0-3185-44B9-8DC1-D1C6822CE937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BA18A0-3185-44B9-8DC1-D1C6822CE937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943C101C-195F-46E2-94B5-C9C479C578FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943C101C-195F-46E2-94B5-C9C479C578FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943C101C-195F-46E2-94B5-C9C479C578FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943C101C-195F-46E2-94B5-C9C479C578FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2BE044B-AC7E-4A97-A640-D47EF96DC536}
+	EndGlobalSection
+EndGlobal
