@@ -74,7 +74,7 @@ namespace Tiemi.Controllers
             }
             else
             {
-                TempData["erro"] = "Campos obrigatórios incompletos";
+                TempData["erro"] = "Campos obrigatórios não completos!";
                 return false;
             }
         }

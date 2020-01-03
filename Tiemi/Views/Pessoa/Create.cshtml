@@ -1,30 +1,38 @@
 ﻿@model Pessoa;
 @{
-    ViewData["Title"] = "Criar novo cadastro";
+    ViewData["Title"] = "Controle de Cadastro";
 }
 
+@{
+    if (!string.IsNullOrEmpty(TempData["erro"]?.ToString()))
+
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">@TempData["erro"]?.ToString()</div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+    }
+}
 <!-- Default form contact -->
-    <form action="@Url.Action("CreatePessoa", "Pessoa")" method="post" id="formPessoa" class="border border-light p-5">
-        @Html.HiddenFor(x => x.Id)
-        <p class="h4 mb-4 text-center">Cadastro</p>
-        <!-- Nome -->
-        <label for="InputNome">Nome</label>
-        @Html.TextBoxFor(x => x.Nome, new { @class = "form-control mb-4", @placeholder = "Nome" })
+<form action="@Url.Action("CreatePessoa", "Pessoa")" method="post" id="formPessoa" class="border border-light p-5">
+    @Html.HiddenFor(x => x.Id)
+    <p class="h4 mb-4 text-center">Cadastro</p>
+    <!-- Nome -->
+    <label for="InputNome">Nome</label>
+    @Html.TextBoxFor(x => x.Nome, new { @class = "form-control mb-4", @placeholder = "Nome", @required = "required" })
 
-        <!-- Idade -->
-        <label for="InputIdade">Idade</label>
-        @Html.TextBoxFor(x => x.Idade, new { @class = "form-control mb-4", @placeholder = "Idade" })
+    <!-- Idade -->
+    <label for="InputIdade">Idade</label>
+    @Html.TextBoxFor(x => x.Idade, new { @class = "form-control mb-4", @placeholder = "Idade" })
 
-        <!-- Email -->
-        <label for="InputEmail">Email address</label>
-        @Html.TextBoxFor(x => x.Email, new { @class = "form-control mb-4", @placeholder = "E-mail" })
+    <!-- Email -->
+    <label for="InputEmail">Email address</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control mb-4", @placeholder = "E-mail", @required = "required" })
 
-        <!-- Telefone -->
-        <label for="InputTelefone">Telefone</label>
-        @Html.TextBoxFor(x => x.Telefone, new { @class = "form-control mb-4", @placeholder = "Telefone", @required="required" })
+    <!-- Telefone -->
+    <label for="InputTelefone">Telefone</label>
+    @Html.TextBoxFor(x => x.Telefone, new { @class = "form-control mb-4", @placeholder = "Telefone", @required = "required", @Value = "" })
 
-        <!-- Send button -->
-        <button class="btn btn-info btn-block" type="submit" id="salvar">Cadastrar</button>
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" type="submit" id="salvar">Salvar</button>
 
-    </form>
+</form>
 
